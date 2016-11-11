@@ -1,0 +1,101 @@
+@charset "utf-8"
+
+// display:inline-block;
+%dib
+    display: inline-block
+    *display: inline
+    *zoom: 1
+%block
+    display: block
+%flexCenter
+    display: flex
+    align-items: center
+    justify-content: center
+=boxShadow($h-shadow,$v-shadow,$blur,$shadowColor)
+    -moz-box-shadow: $h-shadow $v-shadow $blur $shadowColor
+    -webkit-box-shadow: $h-shadow $v-shadow $blur $shadowColor
+    box-shadow: $h-shadow $v-shadow $blur $shadowColor
+=REM($attr,$size)
+    #{$attr}: ($size/37.5px)*1rem
+// 跨浏览器设置透明度
+=opacity($opacity)
+    opacity: $opacity
+    $opacity-ie: $opacity * 100
+    /* IE8 */
+    filter: alpha(opacity=$opacity-ie)
+=w-h($width,$height)
+    width: $width
+    height: $height
+=lH($lH)
+    line-height: $lH
+// 使用rem设置字体尺寸并使用像素进行回退
+    由于rem在设置元素尺寸的时候是相对于HTML根元素的尺寸，
+    而不是他的父元素的设置，因此在使用上不会发生混乱的情况。
+    但是由于在IE8及以下版本的IE浏览器中不支持rem属性
+    因此我们必须在这些浏览器中使用像素为单位来创建回退代码。
+=fZ($size)
+    /* 如果浏览器不支持rem将使用这个规则进行覆盖 */
+    font-size: $size
+    font-size: ($size/16px) * 1rem
+
+// CSS样式/背景
+=bC($backgroundColor)
+    background-color: $backgroundColor
+=bP($backgroundPositionX,$backgroundPositionY)
+    background-position: $backgroundPositionX $backgroundPositionY
+// CSS样式/文本
+=lS($letterSpacing)
+    // 设置字符间距。
+    letter-spacing: $letterSpacing
+=tD($textDecoration:none)
+    // 向文本添加修饰
+    text-decoration: $textDecoration
+// CSS样式/字体
+=fW($fontWeight)
+    font-weight: $fontWeight
+// CSS样式/列表
+    比较特殊,完全简写不容易记忆
+    所以使用简单描述:常用值作为默认变量值
+=listST($listStyleType:none)
+    list-style-type: $listStyleType
+// CSS样式/轮廓
+=oC($outlineColor)
+    // 轮廓颜色
+    outline: $outlineColor
+// CSS框模型/内边距
+=pB($paddingBottom)
+    padding-bottom: $paddingBottom
+=pL($paddingLeft)
+    padding-left: $paddingLeft
+=pR($paddingRight)
+    padding-right: $paddingRight
+=pT($paddingTop)
+    padding-top: $paddingTop
+// CSS框模型/外边距
+=mB($marginBottom)
+    margin-bottom: $marginBottom
+=mL($marginLeft)
+    margin-left: $marginLeft
+=mR($marginRight)
+    margin-right: $marginRight
+=mT($marginTop)
+    margin-top: $marginTop
+// CSS框模型/边框
+=borderW($borderWidth)
+    border-width: $borderWidth
+=borderC($borderColor)
+    border-color: $borderC
+
+
+/* 模块内通用变量 */
+$title-size: 15px
+$title-color: rgb(115,125,145)
+%title-font
+    +REM(font-size,15px)
+    color: rgb(115,125,145)
+$text-size: 14px
+$text-color: rgb(143,153,175)
+%text-font
+    +REM(font-size,14px)
+    color: rgb(143,153,175)
+$dashed-color: rgb(187,197,219)
