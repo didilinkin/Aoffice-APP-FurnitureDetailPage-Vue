@@ -15,7 +15,7 @@ export default {
     name: 'nav',
     data () {
         return {
-            msg: '办公装修',
+            msg: '升降舒适办公椅',
             returnImg: require('../assets/return@2x.png'),
             iconDialogueImg: require('../assets/iconDialogue@2x.png')
         }

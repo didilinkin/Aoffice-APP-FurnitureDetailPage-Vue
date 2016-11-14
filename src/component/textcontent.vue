@@ -1,55 +1,66 @@
 <template>
     <div id="textcontent">
-        <!-- 关于我们 -->
-        <aboutUs class="modules">
-            <h2><b>关于我们</b></h2>
+        <!-- 家具详情 -->
+        <furnitureDetails class="modules">
+            <h2><b>家居详情</b></h2>
             <string />
-            <!-- 关于我们-文字内容 -->
-            <aboutus-content></aboutus-content>
-        </aboutUs>
+            <!-- 家具详情 列表 -->
+            <furnitureDetails-list></furnitureDetails-list>  
+        </furnitureDetails>
 
-        <!-- 装修套餐 -->
-        <decorationSet class="modules">
-            <h2><b>装修套餐</b></h2>
+        <!-- 商品详情 -->
+        <goodsDetails class="modules">
+            <h2><b>商品详情</b></h2>
             <string />
-            <!-- 套餐列表 -->
-            <set-list></set-list>
-        </decorationSet>
+            <!-- 商品详情 列表 -->
+            <goodsDetails-list></goodsDetails-list>  
+        </goodsDetails>
 
-        <!-- 装修流程 -->
-        <decorationFlow class="modules">
-            <h2><b>装修流程</b></h2>
-            <string />
-            <img :src="decorationFlow" />
-        </decorationFlow>
-
-        <!-- 使用说明 -->
+        <!-- 使用说明(替换完成) -->
         <explain class="modules">
             <h2><b>使用说明</b></h2>
             <string />
-            <!-- 说明列表 -->
-            <explain-list></explain-list>
+            <img :src="instruction" />
         </explain>
+
+        <!-- 家居定制服务(替换完成) -->
+        <customized class="modules">
+            <h2><b>家居定制服务</b></h2>
+            <string />
+            <!-- 家居定制服务 列表 -->
+            <customized-list></customized-list>
+        </customized>
+
+        <!-- 注意事项(替换完成) -->
+        <matters class="modules">
+            <h2><b>注意事项</b></h2>
+            <string />
+            <!-- 注意事项 列表 -->
+            <matters-list></matters-list>
+        </matters>
     </div>
 </template>
 
 <script>
-import aboutuscontent from './aboutus-content.vue'
-import setlist from './setlist.vue'
-import explainlist from './explain-list.vue'
+import furnitureDetailsList from './furnitureDetails-list.vue' // 家具详情
+import goodsDetailsList from './goodsDetails-list.vue' // 商品详情
+
+import customizedList from './customized-list.vue' // 家具定制服务 列表
+import mattersList from './matters-list.vue'   // 注意事项 列表
 
 export default {
     name: 'textcontent',
     data () {
         return {
             discount: '95',
-            decorationFlow: require('../assets/decorationFlow.png')
+            instruction: require('../assets/instruction@2x.png')
         }
     },
     components: {
-        'aboutus-content': aboutuscontent,
-        'set-list': setlist,
-        'explain-list': explainlist 
+        'furnitureDetails-list': furnitureDetailsList,
+        'goodsDetails-list': goodsDetailsList,
+        'customized-list': customizedList,
+        'matters-list': mattersList
     }
 };
 </script>
@@ -77,7 +88,7 @@ export default {
             +REM(margin-top,14.8px)
             +REM(margin-bottom,14.8px)
 
-/* 装修流程-模块 */
-decorationFlow img
+/* 使用说明-模块 */
+explain img
     width: 100%
 </style>

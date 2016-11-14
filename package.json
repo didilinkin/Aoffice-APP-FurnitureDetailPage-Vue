@@ -1,6 +1,6 @@
 {
-  "name": "Aoffice-APP-FurnitureDetailPage-Vue",
-  "description": "A+office 移动端WebView-家具详情页",
+  "name": "contentpage_static_vue",
+  "description": "A Vue.js project",
   "author": "yanxiaodi <929213769@qq.com>",
   "private": true,
   "scripts": {

@@ -11,7 +11,7 @@ export default {
     name: 'nav',
     data () {
         return {
-            banner: require('../assets/picJiashengshidai@2x.png')
+            banner: require('../assets/picServicekuaifawu@2x.png')
         }
     },
     components: { textContent }

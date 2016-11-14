@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+        <link rel="" type="" href="./dist/normalize.css">
+        <link rel="apple-touch-icon" href="favicon.png">
+        <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+        <title>contentpage_Vue</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="./dist/build.js"></script>
+        <script type="text/javascript">
+            function returnBtn() {
+                if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                    tianbai.getCall();
+                } else if (/(Android)/i.test(navigator.userAgent)) {
+                    AndroidFunction.showBack();
+                } else {
+                    alert('Windows');
+                };
+            }
+            function dialogueBtn(){
+                if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
+                    tianbai.call();
+                } else if (/(Android)/i.test(navigator.userAgent)) {
+                    AndroidFunction.showChat();
+                } else {
+                    alert('Windows');
+                };
+            }
+        </script>
+    </body>
+</html>
