@@ -1,10 +1,29 @@
 # Aoffice-APP-FurnitureDetailPage-Vue
-
 # A+office 移动端WebView-家具详情页-Vue制作
-
 
 > #### 这是一个 `Vue.js` + `Sass` 项目
 
+***
+## Components Structure / 组件结构说明:
+```
+App.vue (根节点)
+    |
+    |_ nav.vue (导航)
+    |
+    |_ content.vue (主体内容)
+        |
+        |_ textcontent.vue (文字内容)
+            |
+            |_ furnitureDetails-list.vue (家居详情 列表)
+            |
+            |_ goodsDetails-list.vue (商品详情)
+            |
+            |_ customized-list.vue (家居定制服务)
+            |
+            |_ matters-list.vue (注意事项列表)
+
+```
+***
 
 ## Build Setup / 开发流程
 

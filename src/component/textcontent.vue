@@ -5,7 +5,7 @@
             <h2><b>家居详情</b></h2>
             <string />
             <!-- 家具详情 列表 -->
-            <furnitureDetails-list></furnitureDetails-list>  
+            <furnitureDetails-list></furnitureDetails-list>
         </furnitureDetails>
 
         <!-- 商品详情 -->
@@ -13,7 +13,7 @@
             <h2><b>商品详情</b></h2>
             <string />
             <!-- 商品详情 列表 -->
-            <goodsDetails-list></goodsDetails-list>  
+            <goodsDetails-list></goodsDetails-list>
         </goodsDetails>
 
         <!-- 使用说明(替换完成) -->
@@ -44,7 +44,6 @@
 <script>
 import furnitureDetailsList from './furnitureDetails-list.vue' // 家具详情
 import goodsDetailsList from './goodsDetails-list.vue' // 商品详情
-
 import customizedList from './customized-list.vue' // 家具定制服务 列表
 import mattersList from './matters-list.vue'   // 注意事项 列表
 

@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <AppNav />
+        <AppNav msg="升降舒适办公椅"/>
         <AppContent />
     </div>
 
@@ -11,6 +11,7 @@ import AppNav from './component/nav.vue'
 import AppContent from './component/content.vue'
 export default {
     name: 'app',
+    props: ['msg'],
     components: { AppNav,AppContent }
 }
 </script>

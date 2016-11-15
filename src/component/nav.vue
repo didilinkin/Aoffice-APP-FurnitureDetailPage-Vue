@@ -3,7 +3,7 @@
         <span class="return" onClick="javascript:returnBtn()">
             <img :src="returnImg">
         </span>
-        <h1>{{msg}}</h1>
+        <h1>{{ msg }}</h1>
         <span class="iconDialogue" onClick="javascript:dialogueBtn()">
             <img :src="iconDialogueImg">
         </span>
@@ -13,13 +13,14 @@
 <script>
 export default {
     name: 'nav',
+    props: ['msg'],
     data () {
         return {
-            msg: '升降舒适办公椅',
+            // msg: '',
             returnImg: require('../assets/return@2x.png'),
             iconDialogueImg: require('../assets/iconDialogue@2x.png')
         }
-    },
+    }
 }
 </script>
 
