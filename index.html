@@ -34,24 +34,22 @@
                 };
             }
 
-            // Ajax
-            function loadXMLDoc()
-            {
-            	var xmlhttp;
-            	if (window.XMLHttpRequest)
-            	{
-            		//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-            		xmlhttp=new XMLHttpRequest();
-            	}
-            	xmlhttp.onreadystatechange=function()
-            	{
-            		if (xmlhttp.readyState==4 && xmlhttp.status==200)
-            		{
-            			document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
-            		}
-            	}
-            	xmlhttp.open("GET","./returnData.json",true);
-            	xmlhttp.send();
+            // Ajax(成功)
+            function loadXMLDoc(){
+                if (window.XMLHttpRequest){
+                    // code for IE7+, Firefox, Chrome, Opera, Safari
+                    xmlhttp=new XMLHttpRequest();
+                }else{
+                    // code for IE6, IE5
+                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                xmlhttp.onreadystatechange=function(){
+                    if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                        document.getElementById("app").innerHTML=xmlhttp.responseText;
+                    }
+                }
+                xmlhttp.open("POST","./test1.txt",true);
+                xmlhttp.send();
             }
         </script>
     </body>

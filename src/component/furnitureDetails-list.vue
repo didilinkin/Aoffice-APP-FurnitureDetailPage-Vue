@@ -38,4 +38,6 @@ export default {
         margin: 1.5%
         img
             width: 100%
+        img[src=""]
+            opacity: 0
 </style>

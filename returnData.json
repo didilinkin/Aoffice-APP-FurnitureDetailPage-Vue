@@ -1,5 +1,4 @@
 var furnitureData= {
-	"bannerImg": "../assets/picServicekuaifawu@2x.png",
 	"furnitureImg": [
         { "furnitureImgUrl": "../assets/picChairDetail1-1@2x.png" },
         { "furnitureImgUrl": "../assets/picChairDetail1-2@2x.png" },
