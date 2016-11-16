@@ -8,6 +8,8 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "axios": "^0.15.2",
+    "es6-promise": "^4.0.5",
     "vue": "^2.0.1",
     "vuex": "^2.0.0"
   },
