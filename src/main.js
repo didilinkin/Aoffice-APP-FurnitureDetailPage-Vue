@@ -1,16 +1,17 @@
 import Vue from 'vue'
 import App from './App.vue'
-// import store from './vuex/store'
-import axios from 'axios' // 异步
+import store from './store'
+// 异步
+import axios from 'axios' 
 require('es6-promise').polyfill();
 
 new Vue({
     el: '#app',
-    render: h => h(App),
-    data: {
-        msg: '升降舒适办公椅'
-    }
+    store,
+    render: h => h(App)
 })
+
+
 if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
     document.body.style.fontFamily="PingFang SC Regular";
 } else if (/(Android)/i.test(navigator.userAgent)) {
@@ -19,31 +20,30 @@ if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
     document.body.style.fontFamily="Microsoft Yahei";
 };
 
-function getData(){
-      var d = document;
-      var account = d.getElementById('account').value;
-      console.log(account);
-      var password = d.getElementById('password').value;
-      axios.post('/register.php',{
-       firstName:'cdd',
-       password:'123456'
-      })
-   .then(function (response) {
-     console.log(response);
-     d.getElementsByClassName('h3')[0].innerHTML = response.data;
-   })
-   .catch(function (error) {
-     console.log(error);
-   });
- }
+//  访问的接口为本地(当本页面在服务器上面时) 
+// axios.post('http://localhost:8282/aoffice_app/api/test', {
+//     // firstName: 'Fred'  暂时不提交数据
+// })
+//     .then(function (response) {
+//         console.log(response);
+//     })
+//     .catch(function (error) {
+//     console.log(error);
+// });
 
-axios.post('/user', {
-    firstName: 'Fred',
-    lastName: 'Flintstone'
+
+
+// 测试本地JSON数据
+axios.post('./data.json', {
+    // firstName: 'Fred'  暂时不提交数据
 })
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
+.then(function (response) {
+    // 将Data数据转换为变量存储
+    let furnitureImg = response.data.furnitureImg;
+    let goodsDetails = response.data.goodsDetails;
+    let goodsDetails_note = response.data.goodsDetails_note;
+    console.log(furnitureImg);
+})
+.catch(function (error) {
     console.log(error);
 });

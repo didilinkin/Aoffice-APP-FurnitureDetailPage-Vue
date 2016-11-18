@@ -1,29 +1,20 @@
 <template>
     <div id="furnitureDetails-list">
-        <furnitureImg v-for="item in items" v-on:click="say('打开轮播')">
-            <img v-bind:src="item.img" />
+        <furnitureImg v-for="item in furnitureImg_Arr" v-on:click="say('打开轮播')">
+            <img v-bind:src="item.furnitureImgUrl" />
         </furnitureImg>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-    name: 'furnitureDetails-list',
-    data () {
-        return {
-            items: [
-                { img: require('../assets/picChairDetail1-1@2x.png') },
-                { img: require('../assets/picChairDetail1-2@2x.png') },
-                { img: require('../assets/picChairDetail1-3@2x.png') },
-                { img: require('../assets/picChairDetail1-4@2x.png') }
-            ]
-        }
-    },
     methods: {
         say: function (message) {
             alert(message)
         }
-    }
+    },
+    computed: mapGetters(['furnitureImg_Arr'])
 }
 </script>
 

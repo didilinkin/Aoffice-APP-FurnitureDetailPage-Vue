@@ -1,17 +1,17 @@
 <template>
     <div id="app">
-        <AppNav msg="升降舒适办公椅"/>
+        <AppNav/>
         <AppContent />
     </div>
 
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex'   // 引入Vuex‘获取方法 与 行为方法’
 import AppNav from './component/nav.vue'
 import AppContent from './component/content.vue'
 export default {
     name: 'app',
-    props: ['msg'],
     components: { AppNav,AppContent }
 }
 </script>

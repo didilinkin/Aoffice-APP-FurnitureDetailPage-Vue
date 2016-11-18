@@ -1,26 +1,19 @@
 <template>
     <div id="nav">
         <span class="return" onClick="javascript:returnBtn()">
-            <img :src="returnImg">
+            <img src="../assets/return@2x.png">
         </span>
-        <h1>{{ msg }}</h1>
+        <h1> {{ msg }} </h1>
         <span class="iconDialogue" onClick="javascript:dialogueBtn()">
-            <img :src="iconDialogueImg">
+            <img src="../assets/iconDialogue@2x.png">
         </span>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-    name: 'nav',
-    props: ['msg'],
-    data () {
-        return {
-            // msg: '',
-            returnImg: require('../assets/return@2x.png'),
-            iconDialogueImg: require('../assets/iconDialogue@2x.png')
-        }
-    }
+    computed: mapGetters(['msg'])
 }
 </script>
 

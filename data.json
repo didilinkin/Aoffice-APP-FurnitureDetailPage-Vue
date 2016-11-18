@@ -1,11 +1,11 @@
-var furnitureData= {
-	"furnitureImg": [
-        { "furnitureImgUrl": "../assets/picChairDetail1-1@2x.png" },
-        { "furnitureImgUrl": "../assets/picChairDetail1-2@2x.png" },
-        { "furnitureImgUrl": "../assets/picChairDetail1-3@2x.png" },
-        { "furnitureImgUrl": "../assets/picChairDetail1-4@2x.png" }
+{
+    "furnitureImg": [
+        { "furnitureImgUrl": "./dist/picChairDetail1-1@2x.png" },
+        { "furnitureImgUrl": "./dist/picChairDetail1-2@2x.png" },
+        { "furnitureImgUrl": "./dist/picChairDetail1-3@2x.png" },
+        { "furnitureImgUrl": "./dist/picChairDetail1-4@2x.png" }
     ],
-	"goodsDetails": [
+    "goodsDetails": [
         {
             "title": "两个工位尺寸",
             "content": "1200*1200*750"
@@ -24,4 +24,4 @@ var furnitureData= {
         }
     ],
     "goodsDetails_note": "工位不自带活动柜，活动柜单个售价160元"
-};
+}
