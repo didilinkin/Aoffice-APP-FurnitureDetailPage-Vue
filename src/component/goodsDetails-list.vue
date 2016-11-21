@@ -1,12 +1,12 @@
 <template>
     <div id="goodsDetails-list">
         <ul>
-            <li v-for="item in goodsDetails_Arr">
+            <li v-for="item in goodsDetails_Arr[0]">
                 <goods-title><b> {{ item.title }}  </b></goods-title>
                 <goods-content><b> {{ item.content }}  </b></goods-content>
             </li>
         </ul>
-        <h2><b> 注: {{ Note }} </b></h2>
+        <h2><b> 注: {{ Note[0].content }} </b></h2>
     </div>
 </template>
 
