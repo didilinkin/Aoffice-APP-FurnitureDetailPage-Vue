@@ -1,6 +1,6 @@
 <template>
     <div id="furnitureDetails-list">
-        <furnitureImg v-for="item in furnitureImg_Arr" v-on:click="say('打开轮播')">
+        <furnitureImg v-for="item in furnitureImg_Arr[0]" v-on:click="say('打开轮播')">
             <img v-bind:src="item.furnitureImgUrl" />
         </furnitureImg>
     </div>

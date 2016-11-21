@@ -1,41 +1,22 @@
 <template>
     <div id="goodsDetails-list">
         <ul>
-            <li v-for="item in goods">
+            <li v-for="item in goodsDetails_Arr">
                 <goods-title><b> {{ item.title }}  </b></goods-title>
                 <goods-content><b> {{ item.content }}  </b></goods-content>
             </li>
         </ul>
-        <h2><b> 注: {{ note }} </b></h2>
+        <h2><b> 注: {{ Note }} </b></h2>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-    name: 'goodsDetails-list',
-    data () {
-        return {
-            goods: [
-                {
-                    title: '两人工位尺寸',
-                    content: '1200*1200*750'
-                },
-                {
-                    title: '蝴蝶架对桌2工作位售价',
-                    content: '780元'
-                },
-                {
-                    title: '蝴蝶架对桌4工作位售价',
-                    content: '1380元'
-                },
-                {
-                    title: '蝴蝶架对桌6工作位售价',
-                    content: '1980元'
-                },
-            ],
-            note: '工位不自带活动柜，活动柜单个售价160元'
-        }
-    }
+    computed: mapGetters({
+        goodsDetails_Arr: 'goodsDetails_Arr',
+        Note: 'goodsDetails_Note'
+    })
 }
 </script>
 

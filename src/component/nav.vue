@@ -3,7 +3,7 @@
         <span class="return" onClick="javascript:returnBtn()">
             <img src="../assets/return@2x.png">
         </span>
-        <h1> {{ msg }} </h1>
+        <h1> {{ msg[0].title }} </h1>
         <span class="iconDialogue" onClick="javascript:dialogueBtn()">
             <img src="../assets/iconDialogue@2x.png">
         </span>
