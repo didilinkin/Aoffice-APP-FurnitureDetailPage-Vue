@@ -2,7 +2,7 @@
 // Mutation 修改状态，action 则提交（一个或多个） mutation
 // Action 可以随意包含异步操作。
 import Vue from 'vue'
-import axios from 'axios' 
+import * as types from './mutations'
 
 // 临时测试使用
 export const addState = ({ commit }) => commit('addState')
