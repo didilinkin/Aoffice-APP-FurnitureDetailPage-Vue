@@ -2,7 +2,7 @@
     <div id="app">
         <AppNav/>
         <AppContent />
-        <button @click='addState'>添加state</button>
+        <!--<button @click='addState'>添加state</button>-->
     </div>
 
 </template>
@@ -29,14 +29,11 @@ import AppContent from './component/content.vue'
 
 export default {
     components: { AppNav,AppContent },
+    mounted: function () {
+        this.addState()
+    },
     // 测试: 将添加数据时间载入 
     methods: mapActions([ 'addState' ])
-
-
-    // 网上文档 应将异步请求时间放于此处(目前就卡在此处 无法触发请求)
-    // methods: {
-    //     addState: {}
-    // }
 }
 </script>
 
