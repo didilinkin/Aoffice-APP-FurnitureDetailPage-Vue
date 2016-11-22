@@ -1,10 +1,10 @@
 {
     "msg": "升降舒适办公椅",
     "furnitureImg": [
-        { "furnitureImgUrl": "./dist/picChairDetail1-1@2x.png" },
-        { "furnitureImgUrl": "./dist/picChairDetail1-2@2x.png" },
-        { "furnitureImgUrl": "./dist/picChairDetail1-3@2x.png" },
-        { "furnitureImgUrl": "./dist/picChairDetail1-4@2x.png" }
+        { "furnitureImgUrl": "/images/furniture/es003/content1.jpg" },
+        { "furnitureImgUrl": "/images/furniture/es003/content1.jpg" },
+        { "furnitureImgUrl": "/images/furniture/es003/content1.jpg" },
+        { "furnitureImgUrl": "/images/furniture/es003/content1.jpg" }
     ],
     "goodsDetails": [
         {
@@ -24,5 +24,6 @@
             "content": "1980元"
         }
     ],
-    "goodsDetails_note": "工位不自带活动柜，活动柜单个售价160元"
+    "goodsDetails_note": "工位不自带活动柜，活动柜单个售价160元",
+    "imgServerUrl": "http://images.aplusoffice.cn"
 }
