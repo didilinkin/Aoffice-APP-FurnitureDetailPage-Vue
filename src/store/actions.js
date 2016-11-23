@@ -19,7 +19,7 @@ import * as types from './mutations'
 export const addState = ({commit}) => {
     // 测试交互请求(可以获取到数据)
     axios.post('./data.json', {
-        // code: ''
+        code: 'es011'
     })
     .then(function (response) {
         // var get_msg = response.data.msg 拿到标题

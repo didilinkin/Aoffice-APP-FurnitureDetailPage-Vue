@@ -9,11 +9,11 @@
         <link rel="" type="" href="./dist/normalize.css">
         <link rel="apple-touch-icon" href="favicon.png">
         <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
-        <title>contentpage_Vue</title>
+        <title>FurnitureDetailPage</title>
     </head>
     <body>
         <div id="app"></div>
-        <script src="./dist/build.js"></script>
+        <script src="./dist/furniture.js"></script>
         <script type="text/javascript">
             function returnBtn() {
                 if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) {
@@ -32,24 +32,6 @@
                 } else {
                     alert('Windows');
                 };
-            }
-
-            // Ajax(成功)
-            function loadXMLDoc(){
-                if (window.XMLHttpRequest){
-                    // code for IE7+, Firefox, Chrome, Opera, Safari
-                    xmlhttp=new XMLHttpRequest();
-                }else{
-                    // code for IE6, IE5
-                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                }
-                xmlhttp.onreadystatechange=function(){
-                    if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                        document.getElementById("app").innerHTML=xmlhttp.responseText;
-                    }
-                }
-                xmlhttp.open("POST","./test1.txt",true);
-                xmlhttp.send();
             }
         </script>
     </body>
