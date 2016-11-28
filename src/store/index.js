@@ -10,7 +10,8 @@ const state = {
   msg: [{ title: '空标题' }],
   furnitureImg: [],
   goodsDetails: [],
-  goodsDetails_note: [{ content: '空内容' }]
+  goodsDetails_note: [{ content: '空内容' }],
+  goodsDetails_note_show: [{ judgeShow: '' }]
 }
 
 const store = new Vuex.Store({

@@ -6,7 +6,16 @@
                 <goods-content><b> {{ item.content }}  </b></goods-content>
             </li>
         </ul>
-        <h2><b> 注: {{ Note[0].content }} </b></h2>
+        <!--
+            根据JSON数据返回的数据,在mutations.js文件中判断状态
+            如果Note_show[0].display的值是否为 show 
+            则展示该部分
+        -->
+        <h2 v-if="Note_show[0].judgeShow">
+            <b> 注: {{ Note[0].content }} </b>
+        </h2>
+        <!-- 如果判断为不为真,显示空标签 -->
+        <h2 v-else></h2>
     </div>
 </template>
 
@@ -15,7 +24,8 @@ import { mapGetters } from 'vuex'
 export default {
     computed: mapGetters({
         goodsDetails_Arr: 'goodsDetails_Arr',
-        Note: 'goodsDetails_Note'
+        Note: 'goodsDetails_Note',
+        Note_show: 'goodsDetails_Note_show'
     })
 }
 </script>

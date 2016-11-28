@@ -9,3 +9,5 @@ export const msg = state => state.msg
 export const furnitureImg_Arr = state => state.furnitureImg
 export const goodsDetails_Arr = state => state.goodsDetails
 export const goodsDetails_Note = state => state.goodsDetails_note
+
+export const goodsDetails_Note_show = state => state.goodsDetails_note_show
