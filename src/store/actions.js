@@ -12,7 +12,7 @@ export const addState = ({commit}) => {
     })
     .then(function (response) {
         // var get_msg = response.data.msg 拿到标题
-        let get_data = response.data
+        let get_data = response.data.resultData
         commit('addState',get_data)
         // commit('gotData', await getData())
     })
