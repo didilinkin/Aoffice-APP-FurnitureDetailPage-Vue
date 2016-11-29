@@ -6,8 +6,8 @@ import axios from 'axios'
 import * as types from './mutations'
 
 export const addState = ({commit}) => {
-    // 测试交互请求(可以获取到数据)
-    axios.post('./data.json', {
+    // 测试交互请求(可以获取到数据) 本地测试位置: "./data.json"
+    axios.post("/api/es/details?code=" + $("#escode").val(), {
         code: 'es011'
     })
     .then(function (response) {
